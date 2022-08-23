@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Vinyl OT";
+    src:
+        /*url("./public/fonts/ibm-plex\ sans/IBMPlexSans-Text.eot") format("eot"),*/
+        /* url("./public/fonts/ibm-plex\ sans/IBMPlexSans-Text.ttf") format("truetype"), */
+        url("fonts/T-26-VinylOT-Regular.woff") format("woff");
+}

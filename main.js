@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(function (entry) {
             if (entry.intersectionRatio > ratio) {
                 entry.target.classList.add('reveal--visible')
+                entry.target.classList.add('animation--active')
                 // observer.unobserve(entry.target)
             }
             else {
                 entry.target.classList.remove('reveal--visible')
+                entry.target.classList.remove('animation--active')
             }
         })
     }
@@ -22,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver(handleIntersect, options)
     const targets = document.querySelectorAll('[class*="reveal-"]')
     targets.forEach(function (target) {
+        observer.observe(target)
+    })
+    const targetsWordUp = document.querySelectorAll('.textWrapper')
+    targetsWordUp.forEach(function (target) {
         observer.observe(target)
     })
 
