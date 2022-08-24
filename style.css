@@ -194,9 +194,20 @@ body {
     overflow: hidden;
 }
 
+.background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url('./img/daniele-buso.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 .scaleDown {
-    width: 200vw;
-    height: 200vh;
+    /* width: 400vw;
+    height: 400vh; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -205,11 +216,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .scaleDown__activation {
-    color: #f9f9f9;
-    font-size: 30vw;
+    font-size: 50vw;
+    background-color: #fff;
+    color: #000;
+    mix-blend-mode: screen;
     /* -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; */
 }

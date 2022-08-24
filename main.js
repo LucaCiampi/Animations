@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // GSAP SCALE DOWN
     gsap.set(".scaleDown", { xPercent: -50, yPercent: -50 });
     gsap.to(".scaleDown", {
-        scale: 0.4,
+        scale: 0.2,
         scrollTrigger: {
             trigger: ".container",
             pin: ".container",
