@@ -31,4 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(target)
     })
 
+    // GSAP SCALE DOWN
+    gsap.set(".scaleDown", { xPercent: -50, yPercent: -50 });
+    gsap.to(".scaleDown", {
+        scale: 0.4,
+        scrollTrigger: {
+            trigger: ".container",
+            pin: ".container",
+            // pin: true,
+            scrub: true
+        }
+    });
+
 })

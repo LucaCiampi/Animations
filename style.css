@@ -16,9 +16,17 @@ body {
     padding: 5vh 10%;
 }
 
+.ff-vinyl {
+    font-family: 'Vinyl OT', 'mono';
+}
+
 /* colors */
 .grey {
     background-color: #f9f9f9;
+}
+
+.yellow {
+    background-color: #F1B533;
 }
 
 /* reveal */
@@ -177,4 +185,31 @@ body {
     font-family: 'Vinyl OT', 'mono';
     font-size: 4em;
     color: #f9f9f9;
+}
+
+/* GSAP scale down */
+.container {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.scaleDown {
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scaleDown__activation {
+    color: #f9f9f9;
+    font-size: 30vw;
+    /* -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
 }
