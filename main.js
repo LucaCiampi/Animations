@@ -67,15 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let sections2 = gsap.utils.toArray(".isa-panel-2");
     
     gsap.to(sections2, {
-        xPercent: -100 * (sections2.length - 1),
+        xPercent: -80 * (sections2.length - 1),
         ease: "none",
         scrollTrigger: {
             trigger: ".container-2",
             pin: true,
-            scrub: 1,
-            snap: 1 / (sections2.length - 1),
+            scrub: true,
+            // snap: 1 / (sections2.length - 1),
             // base vertical scrolling on how wide the container is so it feels more natural.
-            // end: "+=3500",
+            end: "+=3500",
         }
     });
         
