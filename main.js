@@ -43,4 +43,47 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // ISA -------
+    // Ex 1
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".isa-panel-1").forEach((panel, i) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            // end: "bottom center",
+            pin: true,
+            pinSpacing: false
+        });
+    });
+
+    // const container1 = document.querySelector('.container-1')
+    // ScrollTrigger.create({
+    //     trigger: container1,
+    //     snap: 1 / 4 // snap whole page to the closest section!
+    // });
+    
+    // Ex 2
+    let sections2 = gsap.utils.toArray(".isa-panel-2");
+    
+    gsap.to(sections2, {
+        xPercent: -100 * (sections2.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".container-2",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (sections2.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            // end: "+=3500",
+        }
+    });
+        
+    // Ex 3
+    ScrollTrigger.create({
+        trigger: ".container-3",
+        scoller: ".container-3",
+        snap: ".container-3",
+        pin: true
+    })
 })

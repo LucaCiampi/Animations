@@ -13,11 +13,43 @@ body {
     height: 100vh;
     width: 100%;
     overflow-y: auto;
-    padding: 5vh 10%;
+    padding: 60px;
+}
+
+.exemple-title {
+    font-size: 5em;
+    color: #333;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.v-center {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+.centered {
+    text-align: center;
 }
 
 .ff-vinyl {
     font-family: 'Vinyl OT', 'mono';
+}
+
+.txt-white {
+    color: #FFFFFF;
 }
 
 /* colors */
@@ -27,6 +59,18 @@ body {
 
 .yellow {
     background-color: #F1B533;
+}
+
+.green {
+    background-color: #2AAC72;
+}
+
+.red {
+    background-color: #E75326;
+}
+
+.blue {
+    background-color: #22588A;
 }
 
 /* reveal */
@@ -221,10 +265,51 @@ body {
 }
 
 .scaleDown__activation {
-    font-size: 50vw;
+    font-size: 70vw;
     background-color: #fff;
     color: #000;
     mix-blend-mode: screen;
     /* -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; */
+}
+
+/* Isa */
+/* Ex 1 */
+.isa .number,
+.title {
+    padding: 0;
+    margin: 0;
+}
+
+.isa .number {
+    font-size: 8em;
+}
+
+.isa .title {
+    font-size: 6em;
+    margin-bottom: 30px;
+}
+
+.isa .description {
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+/* Ex 2 */
+.container-2 {
+    width: 400vw;
+    overscroll-behavior: none;
+}
+
+/* Ex 3 */
+.container-3 {
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.isa-panel-3 {
+    scroll-snap-align: start;
+    height: 100vh;
 }
