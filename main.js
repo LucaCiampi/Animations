@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ISA -------
     // Ex 1
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
     gsap.utils.toArray(".isa-panel-1").forEach((panel, i) => {
         ScrollTrigger.create({
@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //     trigger: container1,
     //     snap: 1 / 4 // snap whole page to the closest section!
     // });
-    
+
     // Ex 2
     let sections2 = gsap.utils.toArray(".isa-panel-2");
-    
+
     gsap.to(sections2, {
         xPercent: -80 * (sections2.length - 1),
         ease: "none",
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             end: "+=3500",
         }
     });
-        
+
     // Ex 3
     ScrollTrigger.create({
         trigger: ".container-3",
@@ -86,4 +86,43 @@ document.addEventListener('DOMContentLoaded', function () {
         snap: ".container-3",
         pin: true
     })
+
+    // Timeline
+    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+    gsap.defaults({ ease: "none" });
+
+    const pulses = gsap.timeline({
+        defaults: {
+            duration: 0.05,
+            autoAlpha: 1,
+            scale: 2,
+            transformOrigin: 'center',
+            ease: "elastic(2.5, 1)"
+        }
+    })
+        .to(".ball02, .text01", {}, 0.2)
+        .to(".ball03, .text02", {}, 0.33)
+        .to(".ball04, .text03", {}, 0.46)
+
+    const main = gsap.timeline({
+        defaults: { duration: 1 },
+        scrollTrigger: {
+            trigger: "#svg",
+            scrub: true,
+            start: "top center",
+            end: "bottom center"
+        }
+    })
+        .to(".ball01", { duration: 0.01, autoAlpha: 1 })
+        .from(".theLine", { drawSVG: 0 }, 0)
+        .to(".ball01", {
+            motionPath: {
+                path: ".theLine",
+                align: ".theLine",
+                alignOrigin: [0.5, 0.5],
+            }
+        }, 0)
+        .add(pulses, 0);
+
+
 })

@@ -16,6 +16,10 @@ body {
     padding: 60px;
 }
 
+.d-none {
+    display: none;
+}
+
 .exemple-title {
     font-size: 5em;
     color: #333;
@@ -312,4 +316,33 @@ body {
 .isa-panel-3 {
     scroll-snap-align: start;
     height: 100vh;
+}
+
+/* Timeline */
+.timeline {
+    padding: 80px;
+}
+
+.timeline svg {
+    max-width: 600px;
+    overflow: visible;
+    margin-top: 60vh;
+}
+
+.timeline .ball {
+    fill: white;
+    visibility: hidden;
+}
+
+.timeline .line {
+    fill: none;
+    stroke: white;
+    stroke-width: 2px;
+}
+
+.timeline text {
+    fill: white;
+    font-size: 15px;
+    font-family: "Signika Negative", sans-serif;
+    visibility: hidden;
 }
