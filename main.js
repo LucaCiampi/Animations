@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
             trigger: "#svg",
             scrub: true,
             start: "top center",
-            end: "bottom center"
+            end: "bottom+=1000px"
         }
     })
         .to(".ball01", { duration: 0.01, autoAlpha: 1 })
